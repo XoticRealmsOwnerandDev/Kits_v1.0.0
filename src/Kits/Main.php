@@ -14,13 +14,13 @@ class Main extends PluginBase {
 	public function onEnable(){
 		if(!(is_dir($this->getDataFolder()."Kits/"))){
 			@mkdir($this->getDataFolder()."Kits/");
-			$this->getLogger()->info(TextFormat::YELOW . "Made directory for kits...");
+			$this->getLogger()->info(TextFormat::GREEN . "Made directory for kits...");
 		}
 		$this->saveDefaultConfig();
 	}
 	
 	public function onDisable(){
-		$this->getLogger()->info(TextFormat::RED . "Kits disabled")
+		$this->getLogger()->info(TextFormat::BLUE . "Kits disabled")
 	}
 	
 	public function sendList($player){
